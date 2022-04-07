@@ -3,7 +3,9 @@
 <head>
     <script type="text/javascript">
           function myFun(){
-            alert("Load function...")
+            fetch('https://jsonplaceholder.typicode.com/posts/1')
+                .then(response => response.json())
+                .then(json => console.log(json));
           }
       </script>
     <meta charset="UTF-8">
